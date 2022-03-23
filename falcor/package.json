@@ -1,0 +1,22 @@
+{
+  "name": "falcor",
+  "version": "1.0.0",
+  "description": "Benchmarks for Falcor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "falcor": "^2.3.2",
+    "falcor-express": "^0.1.4",
+    "falcor-json-graph": "^3.2.1",
+    "falcor-router": "^0.8.3",
+    "lodash": "^4.17.21",
+    "promise": "^8.1.0"
+  }
+}
