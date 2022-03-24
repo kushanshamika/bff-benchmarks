@@ -1,0 +1,32 @@
+type Query{
+    rockets: [Rockets]
+    user(id: Int!): User
+    todo(id: Int!): [Todo]
+    post(id: Int!): [Post]
+}
+type Rockets{
+    id: String!
+    name: String!
+}
+type User{
+    id: Int!
+    name: String!
+    username: String!
+    email: String!,
+    phone: String!,
+    website: String!
+}
+
+type Todo{
+    userId: Int!,
+    id: Int!,
+    title: String!,
+    completed: Boolean!
+}
+
+type Post{
+    userId: Int!,
+    id: Int!,
+    title: String!,
+    body: String!
+}
