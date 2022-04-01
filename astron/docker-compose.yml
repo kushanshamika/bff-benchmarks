@@ -1,0 +1,30 @@
+version: '3'
+services:
+  astron-core:
+    image: axillia/astron
+    container_name: astron-core
+    environment:
+      - ASTRON_MONGO=mongodb://astron:astron@astron-mongo:27017/astron?authSource=admin
+      - ASTRON_PORT=80
+    ports:
+      - 80:80
+    networks:
+      - astron
+  astron-mongo:
+    image: mongo
+    volumes:
+      - astronmongo:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=astron
+      - MONGO_INITDB_ROOT_PASSWORD=astron
+    container_name: astron-mongo
+    networks:
+      - astron
+
+volumes:
+  astronmongo:
+
+networks:
+  astron:
